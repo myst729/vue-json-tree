@@ -9,21 +9,21 @@
 - Include the CSS and JS along with Vue, so you get a `<json-tree>` component.
 
 ```html
-<link href="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.css" rel="stylesheet">
+<link href="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.css" rel="stylesheet">
 <script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.js"></script>
+<script src="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.js"></script>
 ```
 
-- Instantiate it with `raw` and (optional) `level` props.
+- Instantiate the component with your data.
 
 ```html
 <div id="app"></div>
 <script>
   new Vue({
-    template: '<json-tree :raw="sample" :level="3"></json-tree>',
+    template: '<json-tree :raw="sample"></json-tree>',
     el: '#app',
     data: {
-      sample: '{"foo": "bar"}' // any **valid** JSON string
+      sample: '{"foo": "bar"}'
     }
   })
 </script>
@@ -46,13 +46,17 @@ Vue.component('json-tree', JsonTree)
 
 ## props
 
-#### `raw` (`String`)
+#### `raw` (`String`, optional)
 
-The data you want to present in the tree view. Must be a **valid** JSON string, otherwise it fails.
+The data you want to present in the tree view. Must be a valid JSON string, otherwise it fails.
+
+#### `data` (`any`, optional)
+
+If your JSON data has already been parsed, bind this one instead. Must be something that can be produced by `JSON.parse()`.
 
 #### `level` (`Number`, optional)
 
-If the data is large and produces a very high tree view, you could define how many levels you want to expand by default.
+Sometimes the data structure is very deep. You could set them to collapsed on load. By default all levels are expanded.
 
 ## demo
 

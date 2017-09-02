@@ -68,7 +68,10 @@
       kv: {
         type: Object
       },
-      raw: {}
+      raw: {
+        type: String
+      },
+      data: {}
     },
 
     data () {
@@ -85,7 +88,14 @@
         }
         let result
         try {
-          result = JSON.parse(this.raw)
+          if (this.raw) {
+            result = JSON.parse(this.raw)
+          } else if (typeof this.data !== 'undefined') {
+            result = this.data
+          } else {
+            result = '[Vue JSON Tree] No JSON data passed.'
+            console.warn(result)
+          }
         } catch (e) {
           result = '[Vue JSON Tree] Invalid raw JSON data.'
           console.warn(result)

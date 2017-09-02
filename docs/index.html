@@ -20,10 +20,10 @@
       }
     </style>
     <link href="https://unpkg.com/prismjs@1.6.0/themes/prism.css" rel="stylesheet">
-    <link href="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.css" rel="stylesheet">
+    <link href="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.css" rel="stylesheet">
     <script src="https://unpkg.com/prismjs@1.6.0/prism.js"></script>
     <script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.js"></script>
+    <script src="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -34,17 +34,17 @@
       <h2>@usage</h2>
       <h4>&gt; Use in browsers</h4>
       <p>1. Include the CSS and JS along with Vue, so you get a <code class="language-html">&lt;json-tree&gt;</code> component.</p>
-      <pre><code class="language-html">&lt;link href="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.css" rel="stylesheet"&gt;
+      <pre><code class="language-html">&lt;link href="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.css" rel="stylesheet"&gt;
 &lt;script src="https://unpkg.com/vue@2.4.2/dist/vue.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.js"&gt;&lt;/script&gt;</code></pre>
-      <p>2. Instantiate it with <code class="language-js">raw</code> and (optional) <code class="language-js">level</code> props.</p>
+&lt;script src="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.js"&gt;&lt;/script&gt;</code></pre>
+      <p>2. Instantiate the component with your data.</p>
       <pre><code class="language-html">&lt;div id="app"&gt;&lt;/div&gt;
 &lt;script&gt;
   new Vue({
-    template: '&lt;json-tree :raw="sample" :level="3"&gt;&lt;/json-tree&gt;',
+    template: '&lt;json-tree :raw="sample"&gt;&lt;/json-tree&gt;',
     el: '#app',
     data: {
-      sample: '{"foo": "bar"}' // any **valid** JSON string
+      sample: '{"foo": "bar"}'
     }
   })
 &lt;/script&gt;</code></pre>
@@ -57,10 +57,12 @@ Vue.component('json-tree', JsonTree)</code></pre>
       <hr>
 
       <h2>@props</h2>
-      <h4>&gt; <code class="language-js">raw</code> (<code class="language-js">String</code>)</h4>
-      <p>The data you want to present in the tree view. Must be a <strong>valid</strong> JSON string, otherwise it fails.</p>
+      <h4>&gt; <code class="language-js">raw</code> (<code class="language-js">String</code>, optional)</h4>
+      <p>The data you want to present in the tree view. Must be a valid JSON string, otherwise it fails.</p>
+      <h4>&gt; <code class="language-js">data</code> (<code class="language-js">any</code>, optional)</h4>
+      <p>If your JSON data has already been parsed, bind this one instead. Must be something that can be produced by <code class="language-js">JSON.parse()</code>.</p>
       <h4>&gt; <code class="language-js">level</code> (<code class="language-js">Number</code>, optional)</h4>
-      <p>If the data is large and produces a very high tree view, you could define how many levels you want to expand by default.</p>
+      <p>Sometimes the data structure is very deep. You could set them to collapsed on load. By default all levels are expanded.</p>
       <hr>
 
       <h2>@demo</h2>
