@@ -9,9 +9,9 @@
 - Include the CSS and JS along with Vue, so you get a `<json-tree>` component.
 
 ```html
-<link href="https://unpkg.com/vue-json-tree@0.1.1/dist/json-tree.css" rel="stylesheet">
+<link href="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.css" rel="stylesheet">
 <script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-json-tree@0.1.1/dist/json-tree.js"></script>
+<script src="https://unpkg.com/vue-json-tree@0.2.0/dist/json-tree.js"></script>
 ```
 
 - Instantiate it with `raw` and (optional) `level` props.

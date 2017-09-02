@@ -1,7 +1,7 @@
 {
   "name": "vue-json-tree",
   "description": "Vue component that renders JSON data in a collapsible tree structure.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Leo Deng",
   "license": "MIT",
   "homepage": "https://github.com/myst729/vue-json-tree",

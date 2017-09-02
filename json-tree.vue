@@ -83,11 +83,14 @@
         if (this.kv) {
           return this.kv
         }
+        let result
         try {
-          let obj = JSON.parse(this.raw)
-          return parse(obj)
+          result = JSON.parse(this.raw)
         } catch (e) {
-          console.warn('[Vue JSON Tree] Invalid raw JSON data.')
+          result = '[Vue JSON Tree] Invalid raw JSON data.'
+          console.warn(result)
+        } finally {
+          return parse(result)
         }
       }
     },
