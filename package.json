@@ -1,0 +1,39 @@
+{
+  "name": "vue-json-tree",
+  "description": "Vue component that renders JSON data in a collapsible tree structure.",
+  "version": "0.1.1",
+  "author": "Leo Deng",
+  "license": "MIT",
+  "homepage": "https://github.com/myst729/vue-json-tree",
+  "keywords": [
+    "vue",
+    "json",
+    "tree"
+  ],
+  "main": "./json-tree.vue",
+  "scripts": {
+    "dev": "webpack --watch",
+    "build": "webpack"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "optimize-css-assets-webpack-plugin": "^3.1.1",
+    "vue-loader": "^13.0.4",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myst729/vue-json-tree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/myst729/vue-json-tree/issues"
+  }
+}

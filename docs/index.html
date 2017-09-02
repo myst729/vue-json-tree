@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-json-tree</title>
+    <style>
+      #wrap {
+        color: #35495e;
+        font-family: 'PT Serif', serif;
+        margin: 0 auto;
+        width: 1000px;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid #abc;
+        margin: 20px 0;
+      }
+      a {
+        color: #41b883;
+      }
+    </style>
+    <link href="https://unpkg.com/prismjs@1.6.0/themes/prism.css" rel="stylesheet">
+    <link href="https://unpkg.com/vue-json-tree@0.1.1/dist/json-tree.css" rel="stylesheet">
+    <script src="https://unpkg.com/prismjs@1.6.0/prism.js"></script>
+    <script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-json-tree@0.1.1/dist/json-tree.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>vue-json-tree</h1>
+      <h4>Vue component that renders JSON data in a collapsible tree structure.</h4>
+      <hr>
+
+      <h2>@usage</h2>
+      <h4>&gt; Use in browsers</h4>
+      <p>1. Include the CSS and JS along with Vue, so you get a <code class="language-html">&lt;json-tree&gt;</code> component.</p>
+      <pre><code class="language-html">&lt;link href="https://unpkg.com/vue-json-tree@0.1.1/dist/json-tree.css" rel="stylesheet"&gt;
+&lt;script src="https://unpkg.com/vue@2.4.2/dist/vue.js"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/vue-json-tree@0.1.1/dist/json-tree.js"&gt;&lt;/script&gt;</code></pre>
+      <p>2. Instantiate it with <code class="language-js">raw</code> and (optional) <code class="language-js">level</code> props.</p>
+      <pre><code class="language-html">&lt;div id="app"&gt;&lt;/div&gt;
+&lt;script&gt;
+  new Vue({
+    template: '&lt;json-tree :raw="sample" :level="3"&gt;&lt;/json-tree&gt;',
+    el: '#app',
+    data: {
+      sample: '{"foo": "bar"}' // any **valid** JSON string
+    }
+  })
+&lt;/script&gt;</code></pre>
+      <h4>&gt; Use with webpack and vue-loader</h4>
+      <p>1. Install the <code class="language-bash">vue-json-tree</code> package via NPM.</p>
+      <pre><code class="language-bash">npm install --save vue-json-tree</code></pre>
+      <p>2. Import the SFC (with CSS embedded) and register it as a component, either globally or in another component.</p>
+      <pre><code class="language-js">import JsonTree from 'vue-json-tree'
+Vue.component('json-tree', JsonTree)</code></pre>
+      <hr>
+
+      <h2>@props</h2>
+      <h4>&gt; <code class="language-js">raw</code> (<code class="language-js">String</code>)</h4>
+      <p>The data you want to present in the tree view. Must be a <strong>valid</strong> JSON string, otherwise it fails.</p>
+      <h4>&gt; <code class="language-js">level</code> (<code class="language-js">Number</code>, optional)</h4>
+      <p>If the data is large and produces a very high tree view, you could define how many levels you want to expand by default.</p>
+      <hr>
+
+      <h2>@demo</h2>
+      <div id="demo"></div>
+      <script>
+        new Vue({
+          template: '<json-tree :raw="sample" :level="5"></json-tree>',
+          el: '#demo',
+          data: {
+            sample: `
+              {
+                "glossary": {
+                  "title": "example glossary",
+                  "gloss": {
+                    "title": "S",
+                    "list": {
+                      "entry": {
+                        "id": "SGML",
+                        "category": "SGML",
+                        "term": "Standard Generalized Markup Language",
+                        "acronym": "SGML",
+                        "abbrev": "ISO 8879:1986",
+                        "definition": {
+                          "description": "A meta-markup language, used to create markup languages such as DocBook.",
+                          "relatives": [
+                            "GML",
+                            "XML"
+                          ]
+                        },
+                        "keyword": "markup"
+                      }
+                    }
+                  }
+                }
+              }
+            `
+          }
+        })
+      </script>
+      <hr>
+
+      <h2>@development</h2>
+      <h4>&gt; Want to fix bugs or implement new features?</h4>
+      <p>1. Grab the source code from GitHub.</p>
+      <pre><code class="language-bash">git clone git@github.com:myst729/vue-json-tree.git</code></pre>
+      <p>2. Install dependencies via NPM.</p>
+      <pre><code class="language-bash">npm install</code></pre>
+      <p>3. Run in dev mode and start to hack.</p>
+      <pre><code class="language-bash">npm run dev</code></pre>
+      <p>4. Build the dist files.</p>
+      <pre><code class="language-bash">npm run build</code></pre>
+      <hr>
+
+      <p>MIT &copy; <a href="https://myst729.github.io/">Leo Deng</a> 2017</p>
+    </div>
+  </body>
+</html>
