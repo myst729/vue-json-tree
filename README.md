@@ -9,9 +9,9 @@
 - Include the CSS and JS along with Vue, so you get a `<json-tree>` component.
 
 ```html
-<link href="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.css" rel="stylesheet">
+<link href="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.css" rel="stylesheet">
 <script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.js"></script>
+<script src="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.js"></script>
 ```
 
 - Instantiate the component with your data.
@@ -67,17 +67,20 @@ Sometimes the data structure is very deep. You could set them to collapsed on lo
 #### Want to fix bugs or implement new features?
 
 ```bash
-# grab the source code from GitHub
+# Grab the source code from GitHub
 git clone git@github.com:myst729/vue-json-tree.git
 
-# install dependencies via NPM
+# Install dependencies via NPM
 npm install
 
-# run in dev mode and start to hack
+# Run in dev mode and start to hack
 npm run dev
 
-# build the dist files
-npm run build
+# Make sure you run the tests
+npm run test
+
+# Build the dist files
+npm run dist
 ```
 
 

@@ -20,10 +20,10 @@
       }
     </style>
     <link href="https://unpkg.com/prismjs@1.6.0/themes/prism.css" rel="stylesheet">
-    <link href="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.css" rel="stylesheet">
+    <link href="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.css" rel="stylesheet">
     <script src="https://unpkg.com/prismjs@1.6.0/prism.js"></script>
     <script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.js"></script>
+    <script src="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -34,9 +34,9 @@
       <h2>@usage</h2>
       <h4>&gt; Use in browsers</h4>
       <p>1. Include the CSS and JS along with Vue, so you get a <code class="language-html">&lt;json-tree&gt;</code> component.</p>
-      <pre><code class="language-html">&lt;link href="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.css" rel="stylesheet"&gt;
+      <pre><code class="language-html">&lt;link href="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.css" rel="stylesheet"&gt;
 &lt;script src="https://unpkg.com/vue@2.4.2/dist/vue.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/vue-json-tree@0.2.2/dist/json-tree.js"&gt;&lt;/script&gt;</code></pre>
+&lt;script src="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.js"&gt;&lt;/script&gt;</code></pre>
       <p>2. Instantiate the component with your data.</p>
       <pre><code class="language-html">&lt;div id="app"&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -112,8 +112,10 @@ Vue.component('json-tree', JsonTree)</code></pre>
       <pre><code class="language-bash">npm install</code></pre>
       <p>3. Run in dev mode and start to hack.</p>
       <pre><code class="language-bash">npm run dev</code></pre>
-      <p>4. Build the dist files.</p>
-      <pre><code class="language-bash">npm run build</code></pre>
+      <p>4. Make sure you run the tests.</p>
+      <pre><code class="language-bash">npm run test</code></pre>
+      <p>5. Build the dist files.</p>
+      <pre><code class="language-bash">npm run dist</code></pre>
       <hr>
 
       <p>MIT &copy; <a href="https://myst729.github.io/">Leo Deng</a> 2017</p>

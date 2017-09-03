@@ -93,11 +93,11 @@
           } else if (typeof this.data !== 'undefined') {
             result = this.data
           } else {
-            result = '[Vue JSON Tree] No JSON data passed.'
+            result = '[Vue JSON Tree] No data passed.'
             console.warn(result)
           }
         } catch (e) {
-          result = '[Vue JSON Tree] Invalid raw JSON data.'
+          result = '[Vue JSON Tree] Invalid raw JSON.'
           console.warn(result)
         } finally {
           return parse(result)
