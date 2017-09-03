@@ -17,26 +17,38 @@
       }
       a {
         color: #41b883;
+        text-decoration: none;
       }
     </style>
     <link href="https://unpkg.com/prismjs@1.6.0/themes/prism.css" rel="stylesheet">
-    <link href="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.css" rel="stylesheet">
+    <link href="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.css" rel="stylesheet">
     <script src="https://unpkg.com/prismjs@1.6.0/prism.js"></script>
     <script src="https://unpkg.com/vue@2.4.2/dist/vue.min.js"></script>
-    <script src="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.js"></script>
+    <script src="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.js"></script>
   </head>
   <body>
     <div id="wrap">
       <h1>vue-json-tree</h1>
+      <p>
+        <a href="https://circleci.com/gh/myst729/vue-json-tree/tree/master">
+          <img src="https://img.shields.io/circleci/project/myst729/vue-json-tree/master.svg" alt="CircleCI">
+        </a>
+        <a href="https://www.npmjs.com/package/vue-json-tree">
+          <img src="https://img.shields.io/npm/v/vue-json-tree.svg" alt="NPM">
+        </a>
+        <a href="https://github.com/myst729/Vuelog/blob/master/LICENSE">
+          <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="LICENSE">
+        </a>
+      </p>
       <h4>Vue component that renders JSON data in a collapsible tree structure.</h4>
       <hr>
 
       <h2>@usage</h2>
       <h4>&gt; Use in browsers</h4>
       <p>1. Include the CSS and JS along with Vue, so you get a <code class="language-html">&lt;json-tree&gt;</code> component.</p>
-      <pre><code class="language-html">&lt;link href="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.css" rel="stylesheet"&gt;
+      <pre><code class="language-html">&lt;link href="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.css" rel="stylesheet"&gt;
 &lt;script src="https://unpkg.com/vue@2.4.2/dist/vue.js"&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.js"&gt;&lt;/script&gt;</code></pre>
+&lt;script src="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.js"&gt;&lt;/script&gt;</code></pre>
       <p>2. Instantiate the component with your data.</p>
       <pre><code class="language-html">&lt;div id="app"&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -57,11 +69,11 @@ Vue.component('json-tree', JsonTree)</code></pre>
       <hr>
 
       <h2>@props</h2>
-      <h4>&gt; <code class="language-js">raw</code> (<code class="language-js">String</code>, optional)</h4>
+      <h4>&gt; <code class="language-js">raw</code> (<code class="language-js">string</code>, optional)</h4>
       <p>The data you want to present in the tree view. Must be a valid JSON string, otherwise it fails.</p>
       <h4>&gt; <code class="language-js">data</code> (<code class="language-js">any</code>, optional)</h4>
       <p>If your JSON data has already been parsed, bind this one instead. Must be something that can be produced by <code class="language-js">JSON.parse()</code>.</p>
-      <h4>&gt; <code class="language-js">level</code> (<code class="language-js">Number</code>, optional)</h4>
+      <h4>&gt; <code class="language-js">level</code> (<code class="language-js">number</code>, optional)</h4>
       <p>Sometimes the data structure is very deep. You could set them to collapsed on load. By default all levels are expanded.</p>
       <hr>
 
@@ -118,7 +130,7 @@ Vue.component('json-tree', JsonTree)</code></pre>
       <pre><code class="language-bash">npm run dist</code></pre>
       <hr>
 
-      <p>MIT &copy; <a href="https://myst729.github.io/">Leo Deng</a> 2017</p>
+      <p>MIT &copy; <a href="https://myst729.github.io/"><strong>Leo Deng</strong></a> 2017</p>
     </div>
   </body>
 </html>

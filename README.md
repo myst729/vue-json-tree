@@ -1,6 +1,11 @@
 # vue-json-tree
 
+[![CircleCI](https://img.shields.io/circleci/project/myst729/vue-json-tree/master.svg)](https://circleci.com/gh/myst729/vue-json-tree/tree/master)
+[![NPM](https://img.shields.io/npm/v/vue-json-tree.svg)](https://www.npmjs.com/package/vue-json-tree)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/myst729/Vuelog/blob/master/LICENSE)
+
 > Vue component that renders JSON data in a collapsible tree structure.
+
 
 ## usage
 
@@ -9,9 +14,9 @@
 - Include the CSS and JS along with Vue, so you get a `<json-tree>` component.
 
 ```html
-<link href="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.css" rel="stylesheet">
+<link href="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.css" rel="stylesheet">
 <script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-json-tree@0.3.1/dist/json-tree.js"></script>
+<script src="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.js"></script>
 ```
 
 - Instantiate the component with your data.
@@ -46,7 +51,7 @@ Vue.component('json-tree', JsonTree)
 
 ## props
 
-#### `raw` (`String`, optional)
+#### `raw` (`string`, optional)
 
 The data you want to present in the tree view. Must be a valid JSON string, otherwise it fails.
 
@@ -54,7 +59,7 @@ The data you want to present in the tree view. Must be a valid JSON string, othe
 
 If your JSON data has already been parsed, bind this one instead. Must be something that can be produced by `JSON.parse()`.
 
-#### `level` (`Number`, optional)
+#### `level` (`number`, optional)
 
 Sometimes the data structure is very deep. You could set them to collapsed on load. By default all levels are expanded.
 
@@ -84,4 +89,4 @@ npm run dist
 ```
 
 
-MIT © [Leo Deng](https://myst729.github.io/)
+MIT © [**Leo Deng**](https://myst729.github.io/)
