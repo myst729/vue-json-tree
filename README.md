@@ -65,28 +65,7 @@ Sometimes the data structure is very deep. You could set them to collapsed on lo
 
 ## demo
 
-**https://myst729.github.io/vue-json-tree**
-
-## development
-
-#### Want to fix bugs or implement new features?
-
-```bash
-# Grab the source code from GitHub
-git clone git@github.com:myst729/vue-json-tree.git
-
-# Install dependencies via NPM
-npm install
-
-# Run in dev mode and start to hack
-npm run dev
-
-# Make sure you run the tests
-npm run test
-
-# Build the dist files
-npm run dist
-```
+https://myst729.github.io/vue-json-tree/
 
 
-MIT © [**Leo Deng**](https://myst729.github.io/)
+MIT © [**Leo**](https://myst729.github.io/)
