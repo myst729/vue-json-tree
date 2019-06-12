@@ -2,6 +2,8 @@ var path = require('path')
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var Uglify = require("uglifyjs-webpack-plugin"); 
+
 
 module.exports = {
   entry: {
@@ -31,7 +33,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
+    new Uglify({
       compress: {
         warnings: false
       },
