@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  dist:
+    docker:
+      - image: circleci/node:8.9.4-stretch-browsers
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run dist
+workflows:
+  version: 2
+  build:
+    jobs:
+      - dist
