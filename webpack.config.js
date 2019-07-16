@@ -1,9 +1,6 @@
-var path = require('path')
-var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-var Uglify = require("uglifyjs-webpack-plugin"); 
-
+const path = require('path')
+const TerserPlugin = require('terser-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: {
@@ -17,33 +14,28 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          extractCSS: true
-        }
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          sourceMap: false
-        }
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
       }
     ]
   },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({})
+    ],
+  },
   plugins: [
-    new Uglify({
-      compress: {
-        warnings: false
-      },
-      sourceMap: false
-    }),
-    new ExtractTextPlugin('json-tree.css'),
-    new OptimizeCSSPlugin({
-      cssProcessorOptions: {
-        safe: true
-      }
-    })
+    new VueLoaderPlugin()
   ]
 }

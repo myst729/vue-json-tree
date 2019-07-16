@@ -14,9 +14,8 @@
 - Include the CSS and JS along with Vue, so you get a `<json-tree>` component.
 
 ```html
-<link href="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.css" rel="stylesheet">
-<script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-json-tree@0.3.3/dist/json-tree.js"></script>
+<script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue-json-tree@0.4.1/dist/json-tree.js"></script>
 ```
 
 - Instantiate the component with your data.
