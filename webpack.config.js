@@ -10,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'json-tree.js'
   },
+  devtool: false,
   module: {
     rules: [
       {
