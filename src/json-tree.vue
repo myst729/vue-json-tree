@@ -71,7 +71,8 @@ export default {
     raw: {
       type: String
     },
-    data: {}
+    data: {},
+    displayText: String
   },
 
   data () {
@@ -107,6 +108,7 @@ export default {
 
   methods: {
     format (n) {
+      if (this.displayText) return this.displayText;
       if (n > 1) return `${n} items`
       return n ? '1 item' : 'no items'
     }
