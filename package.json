@@ -29,7 +29,7 @@
     "karma-mocha": "^2.0.0",
     "karma-mocha-reporter": "^2.2.5",
     "karma-webpack": "^4.0.2",
-    "mocha": "^7.1.2",
+    "mocha": "^10.2.0",
     "terser-webpack-plugin": "^2.3.6",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.1",
